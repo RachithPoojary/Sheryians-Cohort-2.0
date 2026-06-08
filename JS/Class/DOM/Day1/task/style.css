@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    background-color: black;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+
+button{
+    border-radius: 15%;
+    background-color: red;
+}
+h1{
+    display: flex;
+}
