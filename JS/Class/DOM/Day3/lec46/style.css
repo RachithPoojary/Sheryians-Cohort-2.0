@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html , body {
+    height: 100%;
+    width: 100%;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#box{
+    height: 600px;
+    width: 400px;
+    background-color: beige;
+    border-radius: 15px;
+    padding: 30px;
+    position: absolute;
+    text-align: center;
+}
+
+#box div{
+    position: relative;
+    overflow: hidden;
+}
+
+img{
+    height: 500px;
+    width: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0) rotate(-90deg);
+    font-size: 70px;
+    color: transparent;
+    opacity: 0;
+    background-image: url(https://t3.ftcdn.net/jpg/01/14/77/58/360_F_114775804_4yfG9qbKp1NlF1RLo4MUlGIVj9MWhnnc.jpg);
+    background-size: cover;
+    background-clip: text;
+  -webkit-background-clip: text;
+
+  transition: all ease 0.5s;
+}
