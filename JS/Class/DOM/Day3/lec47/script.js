@@ -1,4 +1,7 @@
-const users = [
+let main = document.querySelector('main');
+
+let sum = '';
+const teamMembers = [
   {
     name: "Alex Carter",
     jobProfile: "Frontend Developer",
@@ -61,18 +64,15 @@ const users = [
   }
 ];
 
-let main = document.querySelector('main');
 
-sum = ''
-users.forEach((val)=>{
-    sum = sum + `<div class="card"> 
-            <img src= ${val.image}  alt="image not found">
+teamMembers.forEach((val)=>{
+    sum = sum +  ` <div class="card">
+            <img src="${val.image}" alt="">
             <h1>${val.name}</h1>
             <h2>${val.jobProfile}</h2>
             <p>${val.description}</p>
+
         </div>`
-      
-    
 })
 
 main.innerHTML = sum;
