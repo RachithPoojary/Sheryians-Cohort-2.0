@@ -29,3 +29,11 @@ main img{
     border-radius: 15px;
 
 }
+
+main #i{
+    height: 80px;
+    border-radius: 15px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+
+}

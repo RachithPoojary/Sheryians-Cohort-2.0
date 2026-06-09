@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html , body , main{
+    height: 100%;
+    width: 100%;
+}
+
+main{
+    background-color: #212121 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+main .card{
+    height: 300px;
+    width: 60px;
+    background-color: #fff;
+    border: 2px solid black;
+    text-align: center;
+
+
+}
+
+main .card:active{
+    scale: 0.95;
+}
+
