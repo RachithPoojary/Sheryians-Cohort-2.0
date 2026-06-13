@@ -120,9 +120,15 @@ const reels = [
     }
 ];
 
+let all_reels = document.querySelector('.all-reels');
 
+
+
+function addData(){
+    
+    
 let sum  = '';
-reels.forEach((elem)=>{
+reels.forEach((elem,idx)=>{
     sum += `<div class="reel">
           <video autoplay loop muted src="${elem.video}"></video>
           <div class="bottom">
@@ -131,12 +137,12 @@ reels.forEach((elem)=>{
                 src="${elem.userprofile}"
                 alt="">
               <h4>${elem.username}</h4>
-              <button>${elem.isFollowed?'Unfollow':'Follow'}</button>
+              <button class='follow' id=${idx}>${elem.isFollowed?'Unfollow':'Follow'}</button>
             </div>
             <h3>${elem.caption}</h3>
           </div>
           <div class="right">
-            <div class="like">
+            <div id= ${idx} class="like">
               <h4 class="like-icon icon">${elem.isLiked?'<i class="love ri-heart-3-fill"></i>':'<i class="ri-heart-3-line"></i>'}</h4>
               <h6>${elem.likeCount}</h6>
             </div>
@@ -155,6 +161,35 @@ reels.forEach((elem)=>{
         </div>`
 });
 
-let all_reels = document.querySelector('.all-reels');
 
 all_reels.innerHTML= sum;
+}
+
+addData();
+
+all_reels.addEventListener('click',(val)=>{
+
+    
+    if(val.target.className === 'like'){
+         if(!reels[val.target.id].isLiked){
+        reels[val.target.id].likeCount++
+        reels[val.target.id].isLiked=true;
+    }else{
+         reels[val.target.id].likeCount--
+         reels[val.target.id].isLiked=false;
+    }
+    addData();
+    }
+   
+     
+    if(val.target.className === 'follow'){
+         if(!reels[val.target.id].isFollowed){
+        reels[val.target.id].isFollowed = true;
+    }else{
+        reels[val.target.id].isFollowed=false;
+    }
+    addData();
+    }
+   
+    
+})
