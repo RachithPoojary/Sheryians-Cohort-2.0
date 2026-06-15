@@ -12,11 +12,7 @@ html, body {
     background-color: black;
     overflow: hidden;
 }
-body{
-    background-image: url(https://images.pexels.com/photos/34605902/pexels-photo-34605902.jpeg);
-    background-position: center;
-    background-size: cover;
-}
+
 
 :root{
     --x : 400px;
@@ -26,6 +22,12 @@ body{
     height: 100%;
     width: 100%;
     border: 1px solid #fff;
+    position: absolute;
     /* background: linear-gradient(to bottom right, white,red, black); */
-    background: radial-gradient(150px at var(--x) var(--y), rgba(255, 255, 255, 0) , rgba(0, 0, 0, 0.872));
+    background: radial-gradient(250px at var(--x) var(--y), rgba(255, 255, 255, 0) , rgb(0, 0, 0));
+}
+
+main video{
+    height: 100%;
+    width: 100%;
 }
