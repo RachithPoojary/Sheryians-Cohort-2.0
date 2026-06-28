@@ -19,27 +19,51 @@
 // async function run (){
 //     let val = await prm();
 //     console.log(val);
-    
+
 // }
 
 // run();
 
-async function abcd(){
-    let rawData = await fetch(`https://randomuser.me/api/`);
-    let Data = await rawData.json();
-    console.log(Data.results[0].name.first);
-    
-}
-abcd();
+// async function abcd(){
+//     let rawData = await fetch(`https://randomuser.me/api/`);
+//     let Data = await rawData.json();
+//     console.log(Data.results[0].name.first);
+
+// }
+// abcd();
 // await fetch(`https://randomuser.me/api/`)
 // .then((rawData)=>{
 //     return rawData.json();
 // })
 // .then((data)=>{
 //     console.log(data.results[0].name.first);
-    
+
 // })
 
+// let prm = new Promise((resolve, reject) => {
+//   let rnd = Math.floor(Math.random() * 10);
+//   if (rnd < 5) resolve(rnd);
+//   else reject(rnd);
+// });
 
+// prm
+//   .then((rnd) => {
+//     console.log("resolved", rnd);
+//   })
+//   .catch((err) => {
+//     console.log("rejected ", err);
+//   });
 
+// function prm() {
+//   return new Promise((resolve, reject) => {
+//     let rnd = Math.floor(Math.random() * 10);
+//     if (rnd < 5) resolve(rnd);
+//     else reject(rnd);
+//   });
+// }
+// async function ancd() {
+//   let val = await prm();
+//   console.log(val);
+// }
 
+// ancd();
